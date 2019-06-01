@@ -1,4 +1,4 @@
-package com.prezyk.patient_idifier.activity
+package com.prezyk.patient_idifier.patient_preview
 
 import android.content.Intent
 import android.graphics.Bitmap
@@ -7,11 +7,11 @@ import android.util.Log
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.prezyk.patient_idifier.R
-import com.prezyk.patient_idifier.activity.view.PatientPreviewView
-import com.prezyk.patient_idifier.presenter.PatientPreviewPresenter
+import com.prezyk.patient_idifier.search_results.SearchResultsActivity
 import kotlinx.android.synthetic.main.patient_preview.*
 
-class PatientPreviewActivity: AppCompatActivity(), PatientPreviewView {
+class PatientPreviewActivity: AppCompatActivity(),
+    PatientPreviewView {
 
     lateinit var presenter: PatientPreviewPresenter
 

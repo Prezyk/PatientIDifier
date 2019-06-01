@@ -1,9 +1,8 @@
-package com.prezyk.patient_idifier.presenter
+package com.prezyk.patient_idifier.found_results
 
 import android.util.Log
 import com.prezyk.patient_idifier.web.URL
 import com.prezyk.patient_idifier.model.Result
-import com.prezyk.patient_idifier.activity.view.ResultsSearchResultsView
 import com.prezyk.patient_idifier.web.APIInterface
 import retrofit2.Call
 import retrofit2.Callback

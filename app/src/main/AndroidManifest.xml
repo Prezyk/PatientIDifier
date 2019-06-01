@@ -13,7 +13,7 @@
             android:roundIcon="@mipmap/ic_launcher_round"
             android:supportsRtl="true"
             android:theme="@style/AppTheme">
-        <activity android:name="com.prezyk.patient_idifier.activity.QRCodeCaptureActivity"
+        <activity android:name="com.prezyk.patient_idifier.qr_rec.QRCodeCaptureActivity"
             android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
@@ -21,16 +21,16 @@
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
-        <activity android:name="com.prezyk.patient_idifier.activity.PatientPreviewActivity"
+        <activity android:name="com.prezyk.patient_idifier.patient_preview.PatientPreviewActivity"
             android:screenOrientation="portrait"/>
-        <activity android:name="com.prezyk.patient_idifier.activity.SearchResultsActivity"
+        <activity android:name="com.prezyk.patient_idifier.search_results.SearchResultsActivity"
             android:screenOrientation="portrait"/>
 
         <!--<activity android:name=".view.ImagingDisplayActivity"-->
             <!--android:screenOrientation="portrait"/>-->
-        <activity android:name="com.prezyk.patient_idifier.activity.ResultsSearchResultsActivity"
+        <activity android:name="com.prezyk.patient_idifier.found_results.ResultsSearchResultsActivity"
             android:screenOrientation="portrait"/>
-        <activity android:name="com.prezyk.patient_idifier.activity.ImageDisplayActivity"
+        <activity android:name="com.prezyk.patient_idifier.image_result_display.ImageResultDisplayActivity"
             android:screenOrientation="portrait"/>
         <!---->
     </application>

@@ -1,6 +1,5 @@
-package com.prezyk.patient_idifier.presenter
+package com.prezyk.patient_idifier.search_results
 
-import com.prezyk.patient_idifier.activity.view.SearchResultsView
 import java.text.SimpleDateFormat
 import java.util.*
 

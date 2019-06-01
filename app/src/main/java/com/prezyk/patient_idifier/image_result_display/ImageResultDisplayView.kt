@@ -1,8 +1,8 @@
-package com.prezyk.patient_idifier.activity.view
+package com.prezyk.patient_idifier.image_result_display
 
 import android.graphics.Bitmap
 
-interface ImageDisplayView {
+interface ImageResultDisplayView {
     fun showProgessBar()
     fun hideProgressBar()
     fun updateImageView(image: Bitmap)

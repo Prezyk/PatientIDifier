@@ -1,4 +1,4 @@
-package com.prezyk.patient_idifier.activity
+package com.prezyk.patient_idifier.found_results
 
 import android.os.Bundle
 import android.widget.Toast
@@ -6,13 +6,12 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.prezyk.patient_idifier.R
-import com.prezyk.patient_idifier.activity.view.ResultsSearchResultsView
 import com.prezyk.patient_idifier.adapters.RecyclerResultAdapter
 import com.prezyk.patient_idifier.model.Result
-import com.prezyk.patient_idifier.presenter.ResultsSearchResultsPresenter
 import java.util.*
 
-class ResultsSearchResultsActivity() : AppCompatActivity(), ResultsSearchResultsView {
+class ResultsSearchResultsActivity() : AppCompatActivity(),
+    ResultsSearchResultsView {
 
     lateinit var presenter: ResultsSearchResultsPresenter
     private lateinit var recyclerView: RecyclerView
@@ -21,7 +20,7 @@ class ResultsSearchResultsActivity() : AppCompatActivity(), ResultsSearchResults
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.results_search_results)
+        setContentView(R.layout.results_search_display)
         presenter = ResultsSearchResultsPresenter(this)
 
 
@@ -45,7 +44,7 @@ class ResultsSearchResultsActivity() : AppCompatActivity(), ResultsSearchResults
     }
 
     override fun hideProgressBar() {
-        setContentView(R.layout.results_search_results)
+        setContentView(R.layout.results_search_display)
     }
 
     override fun updateRecyclerView(results: List<Result>) {

@@ -1,4 +1,4 @@
-package com.prezyk.patient_idifier.activity
+package com.prezyk.patient_idifier.search_results
 
 import android.app.DatePickerDialog
 import android.content.Intent
@@ -6,8 +6,7 @@ import android.os.Bundle
 import android.util.Log
 import androidx.appcompat.app.AppCompatActivity
 import com.prezyk.patient_idifier.R
-import com.prezyk.patient_idifier.activity.view.SearchResultsView
-import com.prezyk.patient_idifier.presenter.SearchResultsPresenter
+import com.prezyk.patient_idifier.found_results.ResultsSearchResultsActivity
 import kotlinx.android.synthetic.main.results_search.*
 import java.util.*
 

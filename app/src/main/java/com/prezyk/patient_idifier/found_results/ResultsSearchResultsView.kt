@@ -1,4 +1,4 @@
-package com.prezyk.patient_idifier.activity.view
+package com.prezyk.patient_idifier.found_results
 
 import com.prezyk.patient_idifier.model.Result
 

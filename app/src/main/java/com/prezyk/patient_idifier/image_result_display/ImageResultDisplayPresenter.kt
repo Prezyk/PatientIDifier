@@ -1,7 +1,6 @@
-package com.prezyk.patient_idifier.presenter
+package com.prezyk.patient_idifier.image_result_display
 
 import android.graphics.BitmapFactory
-import com.prezyk.patient_idifier.activity.view.ImageDisplayView
 import com.prezyk.patient_idifier.model.Result
 import com.prezyk.patient_idifier.web.APIInterface
 import com.prezyk.patient_idifier.web.URL
@@ -11,7 +10,7 @@ import retrofit2.Callback
 import retrofit2.Response
 import retrofit2.Retrofit
 
-class ImageDisplayPresenter(var view: ImageDisplayView) : Callback<ResponseBody> {
+class ImageResultDisplayPresenter(var view: ImageResultDisplayView) : Callback<ResponseBody> {
 
     lateinit var result: Result
 

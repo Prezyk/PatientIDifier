@@ -1,4 +1,4 @@
-package com.prezyk.patient_idifier.activity.view
+package com.prezyk.patient_idifier.patient_preview
 
 import android.graphics.Bitmap
 

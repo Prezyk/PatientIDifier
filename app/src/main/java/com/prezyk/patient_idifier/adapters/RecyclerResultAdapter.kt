@@ -8,7 +8,7 @@ import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.prezyk.patient_idifier.R
-import com.prezyk.patient_idifier.activity.ImageDisplayActivity
+import com.prezyk.patient_idifier.image_result_display.ImageResultDisplayActivity
 import com.prezyk.patient_idifier.model.Result
 import java.text.SimpleDateFormat
 
@@ -17,7 +17,7 @@ class RecyclerResultAdapter(private val results: List<Result>): RecyclerView.Ada
     lateinit var context: Context
     lateinit var parent: View
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ResultHolder {
-        val row = LayoutInflater.from(parent.context).inflate(R.layout.results_search_results_item, parent, false)
+        val row = LayoutInflater.from(parent.context).inflate(R.layout.results_search_display_item, parent, false)
         this.context = parent.context
         this.parent = parent
         return RecyclerResultAdapter.ResultHolder(row)
@@ -37,7 +37,7 @@ class RecyclerResultAdapter(private val results: List<Result>): RecyclerView.Ada
         holder.itemView.setOnClickListener {
             when(results[position].testType) {
                 "IMG" -> {
-                    var intent = Intent(context, ImageDisplayActivity::class.java).apply {
+                    var intent = Intent(context, ImageResultDisplayActivity::class.java).apply {
                         putExtra("result", results[position])
                     }
                     context.startActivity(intent)

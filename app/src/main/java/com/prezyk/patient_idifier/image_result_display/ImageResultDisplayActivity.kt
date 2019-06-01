@@ -1,4 +1,4 @@
-package com.prezyk.patient_idifier.activity
+package com.prezyk.patient_idifier.image_result_display
 
 import android.graphics.Bitmap
 import android.os.Bundle
@@ -8,9 +8,7 @@ import android.widget.ImageView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.prezyk.patient_idifier.R
-import com.prezyk.patient_idifier.activity.view.ImageDisplayView
 import com.prezyk.patient_idifier.model.Result
-import com.prezyk.patient_idifier.presenter.ImageDisplayPresenter
 import kotlinx.android.synthetic.main.imaging_display.*
 import kotlin.math.max
 import kotlin.math.min
@@ -18,13 +16,13 @@ import kotlin.math.min
 
 
 
-class ImageDisplayActivity : AppCompatActivity(), ImageDisplayView {
+class ImageResultDisplayActivity : AppCompatActivity(), ImageResultDisplayView {
 
     //TODO poprawić interaktywność zdjęcia
     private var mScaleFactor = 1.0f
     private lateinit var imageViewImagingDisplay: ImageView
     private lateinit var mScaleGestureDetector: ScaleGestureDetector
-    lateinit var presenter: ImageDisplayPresenter
+    lateinit var presenter: ImageResultDisplayPresenter
 //    lateinit var textViewDescription: TextView
 //    lateinit var progressBarImageDisplay: ProgressBar
 
@@ -32,7 +30,7 @@ class ImageDisplayActivity : AppCompatActivity(), ImageDisplayView {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.imaging_display)
-        presenter = ImageDisplayPresenter(this)
+        presenter = ImageResultDisplayPresenter(this)
         presenter.result = intent.extras.getSerializable("result") as Result
         imageViewImagingDisplay = findViewById(R.id.imageViewImagingDisplay)
 //        textViewDescription = findViewById(R.id.textViewDescription)

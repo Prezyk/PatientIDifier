@@ -1,4 +1,4 @@
-package com.prezyk.patient_idifier.activity
+package com.prezyk.patient_idifier.qr_rec
 
 import android.Manifest
 import android.content.DialogInterface
@@ -19,14 +19,13 @@ import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
 import androidx.lifecycle.LifecycleOwner
 import com.prezyk.patient_idifier.R
-import com.prezyk.patient_idifier.activity.view.QRCodeCaptureView
-import com.prezyk.patient_idifier.presenter.QRCodeCapturePresenter
 import com.google.firebase.ml.vision.FirebaseVision
 import com.google.firebase.ml.vision.barcode.FirebaseVisionBarcode
 import com.google.firebase.ml.vision.barcode.FirebaseVisionBarcodeDetector
 import com.google.firebase.ml.vision.barcode.FirebaseVisionBarcodeDetectorOptions
 import com.google.firebase.ml.vision.common.FirebaseVisionImage
 import com.google.firebase.ml.vision.common.FirebaseVisionImageMetadata
+import com.prezyk.patient_idifier.patient_preview.PatientPreviewActivity
 import kotlinx.android.synthetic.main.qr_code_capture.*
 import kotlin.math.max
 

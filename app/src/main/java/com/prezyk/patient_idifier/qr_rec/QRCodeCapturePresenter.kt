@@ -1,6 +1,5 @@
-package com.prezyk.patient_idifier.presenter
+package com.prezyk.patient_idifier.qr_rec
 
-import com.prezyk.patient_idifier.activity.view.QRCodeCaptureView
 import java.lang.IllegalArgumentException
 import java.lang.NumberFormatException
 
