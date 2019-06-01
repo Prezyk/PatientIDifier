@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "759693324113",
+    "firebase_url": "https://qrrecf.firebaseio.com",
+    "project_id": "qrrecf",
+    "storage_bucket": "qrrecf.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:759693324113:android:09191df09522d33f",
+        "android_client_info": {
+          "package_name": "com.example.qrrec"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "759693324113-qdi4futmppcfm9fqifod17ud4qb98emu.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAOc751yrgeOr4LW4XhY8baw98PtqCzJ3g"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "759693324113-qdi4futmppcfm9fqifod17ud4qb98emu.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,52 @@
+<resources>
+    <string name="app_name">QRRec</string>
+
+    <string name="patient_first_name">Imię:</string>
+    <string name="patient_last_name">Nazwisko:</string>
+    <string name="sex">Płeć:</string>
+    <string name="birthdate">Data urodzenia:</string>
+    <string name="phone_number">Numer kontaktowy:</string>
+    <string name="alergies">Alergie:</string>
+
+    <string name="gender_woman">Kobieta</string>
+    <string name="gender_man">Mężczyzna</string>
+
+
+    <string name="patient_first_name_text">Jan</string>
+    <string name="patient_last_name_text">Kowalski</string>
+    <string name="sex_text">Mężczyzna</string>
+    <string name="birthdate_text">20.04.1968</string>
+    <string name="phone_number_text">000-000-000</string>
+    <string name="alergies_text">Penicylina\nKetoprofen</string>
+
+
+    <string name="radio_date">Data</string>
+    <string name="radio_test_type">Rodzaj badania</string>
+    <string name="placeholder_test_type">*, IMG, TS...</string>
+    <string name="placeholder_date_format">dd.MM.yyyy</string>
+    <string name="search_activity_title">Wyszukiwanie wyników</string>
+    <string name="button_search_results">Szukaj</string>
+
+    <string name="search_results_activity_title">Wyniki wyszukiwania</string>
+    <string name="image_description">Example of a CTPA, demonstrating a saddle embolus (dark horizontal line) occluding the pulmonary arteries (bright white triangle)</string>
+    <string name="image_content_desctiption">Image</string>
+
+    <string name="btn_schedule_text">Terminarz</string>
+    <string name="btn_results_text">Wyniki badań</string>
+
+    <string name="toast_invalid_barcode">Nie znaleziono prawidłowego kodu QR</string>
+    <string name="dialog_qr_code_detected_title">Wykryto ID: </string>
+    <string name="dialog_qr_code_detected_message">Czy chcesz wczytać dane pacjenta?</string>
+    <string name="dialog_qr_code_detected_ok">Tak</string>
+    <string name="dialog_qr_code_detected_cancel">Nie</string>
+    <string name="button_code_scan_text">Skanuj</string>
+    <string name="date_label_text">Data:</string>
+    <string name="ID_label_text">ID:</string>
+    <string name="test_type_label_text">Typ:</string>
+
+    <string-array name="test_types">
+        <item>TS</item>
+        <item>IMG</item>
+        <item>LAB</item>
+    </string-array>
+</resources>

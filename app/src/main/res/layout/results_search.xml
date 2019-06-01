@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                                                   xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+                                                   android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="8dp"
+        android:text="@string/search_activity_title"
+        android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textViewStartDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:text="@string/placeholder_date_format"
+        android:enabled="false"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        app:layout_constraintBottom_toTopOf="@+id/spinnerTestType"
+        app:layout_constraintEnd_toEndOf="@+id/textView"
+        app:layout_constraintStart_toEndOf="@+id/checkBoxStartDate"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+    <Spinner
+        android:id="@+id/spinnerTestType"
+        android:layout_width="124dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        android:ems="10"
+        android:entries="@array/test_types"
+        android:hint="@string/placeholder_test_type"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/textViewEndDate"
+        app:layout_constraintStart_toStartOf="@+id/textViewEndDate"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+    <Button
+        android:id="@+id/buttonSearch"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        android:text="@string/button_search_results"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/textView"
+        app:layout_constraintHorizontal_bias="0.489"
+        app:layout_constraintStart_toStartOf="@+id/textView"
+        app:layout_constraintTop_toBottomOf="@+id/spinnerTestType" />
+
+    <CheckBox
+        android:id="@+id/checkBoxStartDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        app:layout_constraintBottom_toBottomOf="@+id/textViewStartDate"
+        app:layout_constraintStart_toStartOf="@+id/textView"
+        app:layout_constraintTop_toTopOf="@+id/textViewStartDate" />
+
+    <CheckBox
+        android:id="@+id/checkBoxEndDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        app:layout_constraintBottom_toBottomOf="@+id/textViewEndDate"
+        app:layout_constraintEnd_toEndOf="@+id/checkBoxStartDate"
+        app:layout_constraintStart_toStartOf="@+id/checkBoxStartDate"
+        app:layout_constraintTop_toTopOf="@+id/textViewEndDate" />
+
+    <TextView
+        android:id="@+id/textViewEndDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        android:enabled="false"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        android:text="@string/placeholder_date_format"
+        app:layout_constraintBottom_toTopOf="@+id/spinnerTestType"
+        app:layout_constraintEnd_toEndOf="@+id/textViewStartDate"
+        app:layout_constraintStart_toStartOf="@+id/textViewStartDate"
+        app:layout_constraintTop_toBottomOf="@+id/textViewStartDate" />
+
+    <CheckBox
+        android:id="@+id/checkBoxTestType"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="@+id/spinnerTestType"
+        app:layout_constraintEnd_toEndOf="@+id/checkBoxEndDate"
+        app:layout_constraintStart_toStartOf="@+id/checkBoxEndDate"
+        app:layout_constraintTop_toTopOf="@+id/spinnerTestType" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

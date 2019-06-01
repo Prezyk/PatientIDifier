@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/constraintLayout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <View
+        android:id="@+id/separator1"
+        android:layout_width="0dp"
+        android:layout_height="2dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="24dp"
+        android:background="#686868"
+        android:visibility="visible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textViewID"
+        android:layout_width="40dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="60dp"
+        android:text="1"
+        app:layout_constraintBottom_toBottomOf="@+id/textViewDate"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/textViewDate" />
+
+    <TextView
+        android:id="@+id/textViewDate"
+        android:layout_width="80dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:text="01.01.2000"
+        app:layout_constraintEnd_toStartOf="@+id/textViewTestType"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toEndOf="@id/textViewID"
+        app:layout_constraintTop_toBottomOf="@+id/separator1" />
+
+    <TextView
+        android:id="@+id/textViewTestType"
+        android:layout_width="60dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="24dp"
+        android:text="IMG"
+        app:layout_constraintBottom_toBottomOf="@+id/textViewDate"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/textViewDate" />
+
+    <TextView
+        android:id="@+id/textViewDescription"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginBottom="8dp"
+        android:maxHeight="100dp"
+        android:text="TextView"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewDate" />
+
+    <TextView
+        android:id="@+id/textViewIDLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:text="@string/ID_label_text"
+        app:layout_constraintBottom_toBottomOf="@+id/textViewID"
+        app:layout_constraintEnd_toStartOf="@+id/textViewID"
+        app:layout_constraintTop_toTopOf="@+id/textViewID" />
+
+    <TextView
+        android:id="@+id/textViewDateLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:text="@string/date_label_text"
+        app:layout_constraintBottom_toBottomOf="@+id/textViewDate"
+        app:layout_constraintEnd_toStartOf="@+id/textViewDate"
+        app:layout_constraintTop_toTopOf="@+id/textViewDate" />
+
+    <TextView
+        android:id="@+id/textViewTestTypeLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:text="@string/test_type_label_text"
+        app:layout_constraintBottom_toBottomOf="@+id/textViewTestType"
+        app:layout_constraintEnd_toStartOf="@+id/textViewTestType"
+        app:layout_constraintTop_toTopOf="@+id/textViewTestType" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
