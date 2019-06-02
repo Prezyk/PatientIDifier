@@ -9,11 +9,7 @@ import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.prezyk.patient_idifier.R
 import com.prezyk.patient_idifier.model.Result
-import kotlinx.android.synthetic.main.imaging_display.*
-import kotlin.math.max
-import kotlin.math.min
-
-
+import kotlinx.android.synthetic.main.image_display.*
 
 
 class ImageResultDisplayActivity : AppCompatActivity(), ImageResultDisplayView {
@@ -29,7 +25,7 @@ class ImageResultDisplayActivity : AppCompatActivity(), ImageResultDisplayView {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.imaging_display)
+        setContentView(R.layout.image_display)
         presenter = ImageResultDisplayPresenter(this)
         presenter.result = intent.extras.getSerializable("result") as Result
         imageViewImagingDisplay = findViewById(R.id.imageViewImagingDisplay)
@@ -38,24 +34,24 @@ class ImageResultDisplayActivity : AppCompatActivity(), ImageResultDisplayView {
         textViewImageDisplayDescription.text = presenter.result.description
 
 
-        val scaleGestureDetector = object: ScaleGestureDetector.SimpleOnScaleGestureListener() {
-
-            override fun onScale(detector: ScaleGestureDetector?): Boolean {
-                mScaleFactor *= detector!!.scaleFactor
-
-                mScaleFactor = max(0.1f, min(mScaleFactor, 10.0f))
-                imageViewImagingDisplay.scaleX = mScaleFactor
-                imageViewImagingDisplay.scaleY = mScaleFactor
-                return true
-
-            }
-        }
-
-        mScaleGestureDetector = ScaleGestureDetector(this, scaleGestureDetector)
-
-        imageViewImagingDisplay.setOnTouchListener { v, event ->
-            mScaleGestureDetector.onTouchEvent(event)
-        }
+//        val scaleGestureDetector = object: ScaleGestureDetector.SimpleOnScaleGestureListener() {
+//
+//            override fun onScale(detector: ScaleGestureDetector?): Boolean {
+//                mScaleFactor *= detector!!.scaleFactor
+//
+//                mScaleFactor = max(0.1f, min(mScaleFactor, 10.0f))
+//                imageViewImagingDisplay.scaleX = mScaleFactor
+//                imageViewImagingDisplay.scaleY = mScaleFactor
+//                return true
+//
+//            }
+//        }
+//
+//        mScaleGestureDetector = ScaleGestureDetector(this, scaleGestureDetector)
+//
+//        imageViewImagingDisplay.setOnTouchListener { v, event ->
+//            mScaleGestureDetector.onTouchEvent(event)
+//        }
 
 
         presenter.downloadImageResult()

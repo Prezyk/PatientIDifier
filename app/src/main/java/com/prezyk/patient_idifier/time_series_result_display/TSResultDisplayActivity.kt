@@ -3,24 +3,20 @@ package com.prezyk.patient_idifier.time_series_result_display
 import android.app.Activity
 import android.content.Intent
 import android.graphics.Color
-import android.opengl.Visibility
 import android.os.Bundle
 import android.view.View
 import androidx.appcompat.app.AppCompatActivity
-import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.github.mikephil.charting.charts.LineChart
 import com.github.mikephil.charting.data.Entry
 import com.github.mikephil.charting.data.LineData
 import com.github.mikephil.charting.data.LineDataSet
 import com.github.mikephil.charting.interfaces.datasets.ILineDataSet
-import com.google.android.gms.vision.text.Line
 import com.prezyk.patient_idifier.R
-import com.prezyk.patient_idifier.adapters.RecyclerChartAdapter
 import com.prezyk.patient_idifier.model.Result
 import com.prezyk.patient_idifier.model.TimeSeries
 import com.prezyk.patient_idifier.time_series_result_display.series_options_check.SelectSeriesActivity
-import kotlinx.android.synthetic.main.new_time_series_display.*
+import kotlinx.android.synthetic.main.time_series_display.*
 import java.util.*
 
 class TSResultDisplayActivity: AppCompatActivity(), TSResultDisplayView {
@@ -35,7 +31,7 @@ class TSResultDisplayActivity: AppCompatActivity(), TSResultDisplayView {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.new_time_series_display)
+        setContentView(R.layout.time_series_display)
         presenter = TSResultDisplayPresenter(this)
         lineChart = findViewById(R.id.lineChart) as LineChart
 
