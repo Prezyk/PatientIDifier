@@ -16,8 +16,11 @@ import retrofit2.Retrofit
 class TSResultDisplayPresenter(var view: TSResultDisplayView) {
 
     lateinit var result: Result
+    lateinit var timeSeries: Array<TimeSeries>
 
     fun downloadData() {
+        view.showProgressBar()
+        view.updateDescriptionText(result.description)
         var retrofit = Retrofit.Builder().baseUrl(URL.URL).build()
 
         var apiInterface = retrofit.create(APIInterface::class.java)
@@ -37,7 +40,9 @@ class TSResultDisplayPresenter(var view: TSResultDisplayView) {
 
                     override fun onPostExecute(result: String?) {
                         super.onPostExecute(result)
-                        view.updateCharts(TimeSeriesFactory.getTSArrayFromString(result!!))
+                        timeSeries = TimeSeriesFactory.getTSArrayFromString(result!!)
+                        view.hideProgressBar()
+//                        view.updateCharts(TimeSeriesFactory.getTSArrayFromString(result!!))
                     }
                 }
                 async.execute()
@@ -45,6 +50,24 @@ class TSResultDisplayPresenter(var view: TSResultDisplayView) {
 
         })
 
+    }
+
+    fun onSelectOptionsButtonClicked() {
+        var titles = Array<String>(timeSeries.size) { i -> "" }
+        for(i in 0 until timeSeries.size) {
+            titles[i] = timeSeries[i].title ?: ""
+        }
+        view.navToSelectOptions(titles)
+    }
+
+    fun acvitityResultReceived(selectedOptions: BooleanArray) {
+        var selectedSeries = ArrayList<TimeSeries>()
+        for(i in 0 until selectedOptions.size) {
+            if(selectedOptions[i]) {
+                selectedSeries.add(timeSeries[i])
+            }
+        }
+        view.updateCharts(selectedSeries)
     }
 
 }

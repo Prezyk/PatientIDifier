@@ -26,7 +26,7 @@ class TimeSeriesFactory() {
                 }
             }
 
-            tsArray = arrayOf(tsArray[0], tsArray[1], tsArray[2])
+//            tsArray = arrayOf(tsArray[0])
 
             return tsArray
         }
