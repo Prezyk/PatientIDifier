@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">QRRec</string>
+    <string name="app_name">PatientIDifier</string>
 
     <string name="patient_first_name">Imię:</string>
     <string name="patient_last_name">Nazwisko:</string>

@@ -10,6 +10,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.prezyk.patient_idifier.R
 import com.prezyk.patient_idifier.image_result_display.ImageResultDisplayActivity
 import com.prezyk.patient_idifier.model.Result
+import com.prezyk.patient_idifier.time_series_result_display.TSResultDisplayActivity
 import java.text.SimpleDateFormat
 
 class RecyclerResultAdapter(private val results: List<Result>): RecyclerView.Adapter<RecyclerResultAdapter.ResultHolder>() {
@@ -44,7 +45,10 @@ class RecyclerResultAdapter(private val results: List<Result>): RecyclerView.Ada
                 }
 
                 "TS" -> {
-
+                    var intent = Intent(context, TSResultDisplayActivity::class.java).apply {
+                        putExtra("result", results[position])
+                    }
+                    context.startActivity(intent)
                 }
 
                 "LAB" -> {

@@ -13,8 +13,8 @@
             android:roundIcon="@mipmap/ic_launcher_round"
             android:supportsRtl="true"
             android:theme="@style/AppTheme">
-        <activity android:name="com.prezyk.patient_idifier.qr_rec.QRCodeCaptureActivity"
-            android:screenOrientation="portrait">
+        <activity android:name="com.prezyk.patient_idifier.time_series_result_display.TSResultDisplayActivity"
+            android:screenOrientation="landscape">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
 
@@ -32,6 +32,8 @@
             android:screenOrientation="portrait"/>
         <activity android:name="com.prezyk.patient_idifier.image_result_display.ImageResultDisplayActivity"
             android:screenOrientation="portrait"/>
+
+        <!--<activity android:name=".time_series_result_display.TSResultDisplayActivity"/>-->
         <!---->
     </application>
 
