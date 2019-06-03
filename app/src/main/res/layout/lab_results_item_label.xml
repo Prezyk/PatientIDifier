@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/textViewTestGroup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="4dp"
+        android:text="TextView"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textViewTestNameLabel"
+        android:layout_width="60dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="4dp"
+        android:text="TextView"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/separator4" />
+
+    <TextView
+        android:id="@+id/textViewResultValueLabel"
+        android:layout_width="60dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:text="TextView"
+        app:layout_constraintBottom_toBottomOf="@+id/textViewTestNameLabel"
+        app:layout_constraintStart_toEndOf="@+id/textViewTestNameLabel"
+        app:layout_constraintTop_toTopOf="@+id/textViewTestNameLabel" />
+
+    <TextView
+        android:id="@+id/textViewResultUnitLabel"
+        android:layout_width="60dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:text="TextView"
+        app:layout_constraintBottom_toBottomOf="@+id/textViewResultValueLabel"
+        app:layout_constraintStart_toEndOf="@+id/textViewResultValueLabel"
+        app:layout_constraintTop_toTopOf="@+id/textViewResultValueLabel" />
+
+    <TextView
+        android:id="@+id/textViewResultLowerLimitLabel"
+        android:layout_width="60dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:text="TextView"
+        app:layout_constraintBottom_toBottomOf="@+id/textViewResultUnitLabel"
+        app:layout_constraintStart_toEndOf="@+id/textViewResultUnitLabel"
+        app:layout_constraintTop_toTopOf="@+id/textViewResultUnitLabel" />
+
+    <TextView
+        android:id="@+id/textViewResultUpperLimitLabel"
+        android:layout_width="60dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:text="TextView"
+        app:layout_constraintBottom_toBottomOf="@+id/textViewResultLowerLimitLabel"
+        app:layout_constraintStart_toEndOf="@+id/textViewResultLowerLimitLabel"
+        app:layout_constraintTop_toTopOf="@+id/textViewResultLowerLimitLabel" />
+
+    <View
+        android:id="@+id/separator4"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:layout_marginTop="4dp"
+        android:background="#686868"
+        app:layout_constraintEnd_toEndOf="@+id/separator"
+        app:layout_constraintStart_toStartOf="@+id/separator"
+        app:layout_constraintTop_toBottomOf="@+id/textViewTestGroup" />
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -48,6 +48,7 @@ class TSResultDisplayActivity: AppCompatActivity(), TSResultDisplayView {
     override fun updateCharts(tsArray: List<TimeSeries>) {
 
 //TODO dopicowanie wykresu
+        //TODO napisy na elementach
 
         lineChart.apply {
             setBackgroundColor(Color.WHITE)

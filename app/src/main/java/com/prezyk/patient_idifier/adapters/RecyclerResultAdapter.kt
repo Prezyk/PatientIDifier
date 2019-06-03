@@ -9,6 +9,7 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.prezyk.patient_idifier.R
 import com.prezyk.patient_idifier.image_result_display.ImageResultDisplayActivity
+import com.prezyk.patient_idifier.lab_results_display.LabResultsDisplayActivity
 import com.prezyk.patient_idifier.model.Result
 import com.prezyk.patient_idifier.time_series_result_display.TSResultDisplayActivity
 import java.text.SimpleDateFormat
@@ -28,6 +29,8 @@ class RecyclerResultAdapter(private val results: List<Result>): RecyclerView.Ada
     override fun getItemCount(): Int {
         return results.size
     }
+
+
 
     override fun onBindViewHolder(holder: ResultHolder, position: Int) {
         holder.textViewResultID.text = results[position].id.toString()
@@ -52,6 +55,10 @@ class RecyclerResultAdapter(private val results: List<Result>): RecyclerView.Ada
                 }
 
                 "LAB" -> {
+                    var intent = Intent(context, LabResultsDisplayActivity::class.java).apply {
+                        putExtra("result", results[position])
+                    }
+                    context.startActivity(intent)
 
                 }
             }

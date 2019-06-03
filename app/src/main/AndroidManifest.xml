@@ -35,6 +35,7 @@
         <activity android:name=".time_series_result_display.series_options_check.SelectSeriesActivity" />
         <activity android:name=".time_series_result_display.TSResultDisplayActivity"
             android:screenOrientation="landscape"/>
+        <activity android:name=".lab_results_display.LabResultsDisplayActivity"/>
 
         <!--<activity android:name=".time_series_result_display.TSResultDisplayActivity"/>-->
         <!---->

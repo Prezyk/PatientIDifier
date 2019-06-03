@@ -2,6 +2,7 @@ package com.prezyk.patient_idifier.web
 
 import com.prezyk.patient_idifier.model.Patient
 import com.prezyk.patient_idifier.model.Result
+import com.prezyk.patient_idifier.model.json.LabResults
 import okhttp3.ResponseBody
 import retrofit2.Call
 import retrofit2.http.GET
@@ -25,4 +26,7 @@ interface APIInterface {
     @GET("/data/patient/timeseriesresult")
     @Streaming
     fun doGetTimeSeriesResult(@Query("resultID") resultID: Long) : Call<ResponseBody>
+
+    @GET("/data/patient/labtestresult")
+    fun doGetLabResult(@Query("resultID") resultID: Long) : Call<LabResults>
 }
