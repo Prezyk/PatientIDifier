@@ -12,6 +12,7 @@ import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
 import retrofit2.Retrofit
+import java.sql.Time
 
 class TSResultDisplayPresenter(var view: TSResultDisplayView) {
 
@@ -32,15 +33,16 @@ class TSResultDisplayPresenter(var view: TSResultDisplayView) {
 
             override fun onResponse(call: Call<ResponseBody>, response: Response<ResponseBody>) {
 //                Log.e("RESPONSE", String(response.body()!!.bytes(), Charset.forName("UTF-8")))
-                var async = object: AsyncTask<Void, Void, String>() {
+                var async = object: AsyncTask<Void, Void, Array<TimeSeries>>() {
                     var text: String? = null
-                    override fun doInBackground(vararg params: Void?): String? {
-                        return String(response.body()!!.bytes())
+                    override fun doInBackground(vararg params: Void?): Array<TimeSeries>? {
+                        var timeSeriesBack = TimeSeriesFactory.getTSArrayFromString(String(response.body()!!.bytes()))
+                        return timeSeriesBack
                     }
 
-                    override fun onPostExecute(result: String?) {
+                    override fun onPostExecute(result: Array<TimeSeries>?) {
                         super.onPostExecute(result)
-                        timeSeries = TimeSeriesFactory.getTSArrayFromString(result!!)
+                        timeSeries = result!!
                         view.hideProgressBar()
 //                        view.updateCharts(TimeSeriesFactory.getTSArrayFromString(result!!))
                     }

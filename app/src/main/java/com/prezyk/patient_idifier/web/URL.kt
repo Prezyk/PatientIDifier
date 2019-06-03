@@ -5,5 +5,6 @@ class URL {
     companion object {
 //        val URL = "http://10.0.2.2:8080"
         val URL = "http://192.168.0.101:8080"
+//        val URL = "http://192.168.43.49:8080"
     }
 }

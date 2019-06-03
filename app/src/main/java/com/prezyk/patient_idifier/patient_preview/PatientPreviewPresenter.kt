@@ -49,5 +49,6 @@ class PatientPreviewPresenter(var view: PatientPreviewView) : Callback<Patient>{
         this.patient = response.body()!!
 
         view.updateTextData(response.body()!!.getData())
+        view.updateImage(this.patient.getPhoto())
     }
 }

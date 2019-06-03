@@ -8,16 +8,22 @@ import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.RecyclerView
 import com.github.mikephil.charting.charts.LineChart
+import com.github.mikephil.charting.components.AxisBase
+import com.github.mikephil.charting.components.XAxis
 import com.github.mikephil.charting.data.Entry
 import com.github.mikephil.charting.data.LineData
 import com.github.mikephil.charting.data.LineDataSet
+import com.github.mikephil.charting.formatter.ValueFormatter
 import com.github.mikephil.charting.interfaces.datasets.ILineDataSet
+import com.github.mikephil.charting.utils.ViewPortHandler
 import com.prezyk.patient_idifier.R
 import com.prezyk.patient_idifier.model.Result
 import com.prezyk.patient_idifier.model.TimeSeries
 import com.prezyk.patient_idifier.time_series_result_display.series_options_check.SelectSeriesActivity
 import kotlinx.android.synthetic.main.time_series_display.*
+import java.text.DecimalFormat
 import java.util.*
+import com.github.mikephil.charting.formatter.IValueFormatter as IValueFormatter1
 
 class TSResultDisplayActivity: AppCompatActivity(), TSResultDisplayView {
 
@@ -59,7 +65,8 @@ class TSResultDisplayActivity: AppCompatActivity(), TSResultDisplayView {
             isDragEnabled = true
             setScaleEnabled(true)
             setPinchZoom(true)
-            isAutoScaleMinMaxEnabled = true
+
+//            isAutoScaleMinMaxEnabled = true
             setChartData(tsArray, this)
 
         }
@@ -72,7 +79,7 @@ class TSResultDisplayActivity: AppCompatActivity(), TSResultDisplayView {
         for(j in 0 until tsArray.size) {
             var dataList = ArrayList<Entry>()
             for (i in 0 until tsArray[j].dataSeries[0].size) {
-                dataList.add(Entry(tsArray[j].dataSeries[0][i].toFloat(), tsArray[j].dataSeries[1][i].toFloat()))
+                dataList.add(Entry(tsArray[j].dataSeries[0][i].toFloat()/1000, tsArray[j].dataSeries[1][i].toFloat()/1000))
             }
 
             var dataSet: LineDataSet
@@ -93,16 +100,19 @@ class TSResultDisplayActivity: AppCompatActivity(), TSResultDisplayView {
             var data = LineData(dataSetList)
             chart.data = data
 
+
 //
     }
 
     override fun showProgressBar() {
         scrollViewTS.visibility = View.GONE
+        lineChart.visibility = View.GONE
         progressBarTS.visibility = View.VISIBLE
     }
 
     override fun hideProgressBar() {
         scrollViewTS.visibility = View.VISIBLE
+        lineChart.visibility = View.VISIBLE
         progressBarTS.visibility = View.GONE
     }
 

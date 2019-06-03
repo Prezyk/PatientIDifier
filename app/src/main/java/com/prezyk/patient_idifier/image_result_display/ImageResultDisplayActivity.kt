@@ -14,7 +14,7 @@ import kotlinx.android.synthetic.main.image_display.*
 
 class ImageResultDisplayActivity : AppCompatActivity(), ImageResultDisplayView {
 
-    //TODO poprawić interaktywność zdjęcia
+    //TODO interaktywność zdjęcia + scrollview(?)
     private var mScaleFactor = 1.0f
     private lateinit var imageViewImagingDisplay: ImageView
     private lateinit var mScaleGestureDetector: ScaleGestureDetector

@@ -6,6 +6,5 @@ interface ResultsSearchResultsView {
     fun showProgressBar()
     fun hideProgressBar()
     fun showErrorMessage()
-    fun navToResultDetails()
     fun updateRecyclerView(results: List<Result>)
 }

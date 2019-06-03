@@ -7,6 +7,7 @@ import android.util.Log
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.prezyk.patient_idifier.R
+import com.prezyk.patient_idifier.qr_rec.QRCodeCaptureActivity
 import com.prezyk.patient_idifier.search_results.SearchResultsActivity
 import kotlinx.android.synthetic.main.patient_preview.*
 
@@ -18,7 +19,6 @@ class PatientPreviewActivity: AppCompatActivity(),
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.patient_preview)
-
         presenter = PatientPreviewPresenter(this)
 
         var patientID = intent.extras.get("id") as Long
@@ -73,6 +73,7 @@ class PatientPreviewActivity: AppCompatActivity(),
     }
 
     override fun returnToQRCodeCapturActivity() {
-        finish()
+        var intent = Intent(this, QRCodeCaptureActivity::class.java)
+        startActivity(intent)
     }
 }

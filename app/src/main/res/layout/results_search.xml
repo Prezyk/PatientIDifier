@@ -20,15 +20,13 @@
         android:id="@+id/textViewStartDate"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="24dp"
+        android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
         android:layout_marginBottom="8dp"
-        android:text="@string/placeholder_date_format"
         android:enabled="false"
+        android:text="@string/placeholder_date_format"
         android:textAppearance="@style/TextAppearance.AppCompat.Medium"
         app:layout_constraintBottom_toTopOf="@+id/spinnerTestType"
-        app:layout_constraintEnd_toEndOf="@+id/textView"
         app:layout_constraintStart_toEndOf="@+id/checkBoxStartDate"
         app:layout_constraintTop_toBottomOf="@+id/textView" />
 
@@ -43,7 +41,6 @@
         android:hint="@string/placeholder_test_type"
         android:inputType="textPersonName"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@+id/textViewEndDate"
         app:layout_constraintStart_toStartOf="@+id/textViewEndDate"
         app:layout_constraintTop_toBottomOf="@+id/textView" />
 
@@ -64,8 +61,9 @@
         android:id="@+id/checkBoxStartDate"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="32dp"
+        android:layout_marginEnd="16dp"
         app:layout_constraintBottom_toBottomOf="@+id/textViewStartDate"
+        app:layout_constraintEnd_toEndOf="@+id/textView"
         app:layout_constraintStart_toStartOf="@+id/textView"
         app:layout_constraintTop_toTopOf="@+id/textViewStartDate" />
 
@@ -73,7 +71,6 @@
         android:id="@+id/checkBoxEndDate"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
         app:layout_constraintBottom_toBottomOf="@+id/textViewEndDate"
         app:layout_constraintEnd_toEndOf="@+id/checkBoxStartDate"
         app:layout_constraintStart_toStartOf="@+id/checkBoxStartDate"
@@ -86,10 +83,9 @@
         android:layout_marginTop="8dp"
         android:layout_marginBottom="8dp"
         android:enabled="false"
-        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
         android:text="@string/placeholder_date_format"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
         app:layout_constraintBottom_toTopOf="@+id/spinnerTestType"
-        app:layout_constraintEnd_toEndOf="@+id/textViewStartDate"
         app:layout_constraintStart_toStartOf="@+id/textViewStartDate"
         app:layout_constraintTop_toBottomOf="@+id/textViewStartDate" />
 
@@ -101,5 +97,33 @@
         app:layout_constraintEnd_toEndOf="@+id/checkBoxEndDate"
         app:layout_constraintStart_toStartOf="@+id/checkBoxEndDate"
         app:layout_constraintTop_toTopOf="@+id/spinnerTestType" />
+
+    <TextView
+        android:id="@+id/textViewStartDateLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:text="@string/start_date_label"
+        app:layout_constraintBottom_toBottomOf="@+id/checkBoxStartDate"
+        app:layout_constraintEnd_toStartOf="@+id/checkBoxStartDate"
+        app:layout_constraintTop_toTopOf="@+id/checkBoxStartDate" />
+
+    <TextView
+        android:id="@+id/textViewEndDateLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/end_date_label"
+        app:layout_constraintBottom_toBottomOf="@+id/checkBoxEndDate"
+        app:layout_constraintEnd_toEndOf="@+id/textViewStartDateLabel"
+        app:layout_constraintTop_toTopOf="@+id/checkBoxEndDate" />
+
+    <TextView
+        android:id="@+id/textViewTestTypeLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/test_type_label"
+        app:layout_constraintBottom_toBottomOf="@+id/checkBoxTestType"
+        app:layout_constraintEnd_toEndOf="@+id/textViewEndDateLabel"
+        app:layout_constraintTop_toTopOf="@+id/checkBoxTestType" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

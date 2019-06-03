@@ -17,7 +17,7 @@ class LabResultsDisplayActivity: AppCompatActivity(), LabResultsDisplayView {
     lateinit var recyclerView: RecyclerView
     lateinit var viewAdapter: RecyclerView.Adapter<*>
     lateinit var viewManager: LinearLayoutManager
-    //TODO labele
+    //TODO labele + wyśrodkowanie recyclerview
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

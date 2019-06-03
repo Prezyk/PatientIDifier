@@ -2,16 +2,18 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
+    android:layout_width="wrap_content"
     android:layout_height="wrap_content">
 
     <TextView
         android:id="@+id/textViewResultUpperLimit"
         android:layout_width="60dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
         android:text="TextView"
         app:layout_constraintBottom_toBottomOf="@+id/textViewResultLowerLimit"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/textViewResultLowerLimit"
         app:layout_constraintTop_toTopOf="@+id/textViewResultLowerLimit" />
 
@@ -19,7 +21,7 @@
         android:id="@+id/textViewResultLowerLimit"
         android:layout_width="60dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
+        android:layout_marginStart="8dp"
         android:text="TextView"
         app:layout_constraintBottom_toBottomOf="@+id/textViewResultUnit"
         app:layout_constraintStart_toEndOf="@+id/textViewResultUnit"
@@ -27,9 +29,9 @@
 
     <TextView
         android:id="@+id/textViewResultUnit"
-        android:layout_width="60dp"
+        android:layout_width="70dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
+        android:layout_marginStart="8dp"
         android:text="TextView"
         app:layout_constraintBottom_toBottomOf="@+id/textViewResultValue"
         app:layout_constraintStart_toEndOf="@+id/textViewResultValue"
@@ -39,7 +41,7 @@
         android:id="@+id/textViewResultValue"
         android:layout_width="60dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
+        android:layout_marginStart="8dp"
         android:text="TextView"
         app:layout_constraintBottom_toBottomOf="@+id/textViewTestName"
         app:layout_constraintStart_toEndOf="@+id/textViewTestName"
@@ -49,7 +51,7 @@
         android:id="@+id/textViewTestName"
         android:layout_width="60dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
+        android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:text="TextView"
         app:layout_constraintBottom_toBottomOf="parent"

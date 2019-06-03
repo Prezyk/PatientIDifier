@@ -32,6 +32,7 @@ import kotlin.math.max
 
 
 class QRCodeCaptureActivity: AppCompatActivity(), QRCodeCaptureView, LifecycleOwner {
+    //TODO ma nie umierać
 
     private lateinit var detector: FirebaseVisionBarcodeDetector
     private val REQUEST_CODE_PERMISSIONS = 10

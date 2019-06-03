@@ -1,5 +1,8 @@
 package com.prezyk.patient_idifier.model
 
+import android.graphics.Bitmap
+import android.graphics.BitmapFactory
+import android.util.Base64
 import java.lang.StringBuilder
 import java.text.SimpleDateFormat
 import java.util.*
@@ -13,6 +16,8 @@ class Patient {
     var birthdate: Date? = null
     var phoneNumber: String? = null
     var allergies: List<String>? = null
+    var photoBase64: String? = null
+
 
     constructor(
         patientID: Long,
@@ -22,7 +27,8 @@ class Patient {
         gender: String,
         birthdate: Date,
         phoneNumber: String,
-        allergies: List<String>
+        allergies: List<String>,
+        photoBase64: String
     ) {
         this.id = patientID
         this.firstName = firstName
@@ -32,6 +38,7 @@ class Patient {
         this.birthdate = birthdate
         this.phoneNumber = phoneNumber
         this.allergies = allergies
+        this.photoBase64 = photoBase64
     }
 
 
@@ -55,5 +62,10 @@ class Patient {
         }
         array[5] = sb.toString()
         return array
+    }
+
+    fun getPhoto() : Bitmap {
+        var bytes = Base64.decode(this.photoBase64, Base64.DEFAULT)
+        return BitmapFactory.decodeByteArray(bytes, 0, bytes.size)
     }
 }

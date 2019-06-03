@@ -2,10 +2,12 @@ package com.prezyk.patient_idifier.adapters
 
 import android.content.Context
 import android.content.Intent
+import android.graphics.Color
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
+import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.recyclerview.widget.RecyclerView
 import com.prezyk.patient_idifier.R
 import com.prezyk.patient_idifier.image_result_display.ImageResultDisplayActivity
@@ -37,6 +39,9 @@ class RecyclerResultAdapter(private val results: List<Result>): RecyclerView.Ada
         holder.textViewResultDate.text = dateFormat.format(results[position].date)
         holder.textViewResultTestType.text = results[position].testType
         holder.textViewDescription.text = results[position].description
+//        if(position.toDouble()%2==0.0) {
+//            holder.constraintLayout.setBackgroundColor(Color.LTGRAY)
+//        }
 
         holder.itemView.setOnClickListener {
             when(results[position].testType) {
@@ -73,7 +78,7 @@ class RecyclerResultAdapter(private val results: List<Result>): RecyclerView.Ada
         var textViewResultDate: TextView = v.findViewById(R.id.textViewDate) as TextView
         var textViewResultTestType: TextView = v.findViewById(R.id.textViewTestType) as TextView
         var textViewDescription: TextView = v.findViewById(R.id.textViewDescription) as TextView
-
+//        var constraintLayout: ConstraintLayout = v.findViewById(R.id.constraintLayoutSearchDisplayItem)
 
     }
 }
