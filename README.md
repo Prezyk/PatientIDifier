@@ -7,4 +7,5 @@ Functionality:
 - presentation of imaging data (interactive ImageView)
 - presentation of time series data, ECG (MPAndroid Chart library)
 - presentation of lab test results
+
 Application video: https://drive.google.com/file/d/1rxZ49-mZ32msMrdqY-pK8yvX63Twf7Bo/view?usp=sharing
