@@ -11,3 +11,4 @@ Functionality:
 Application video: https://drive.google.com/file/d/1rxZ49-mZ32msMrdqY-pK8yvX63Twf7Bo/view?usp=sharing
 
 Server for the client app: https://github.com/Prezyk/patient_data_server
+To connect client type server URL address in com.prezyk.patient_idifier.web.URL class.
